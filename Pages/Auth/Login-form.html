@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Board | Login</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="icon" href="/Assets/job-board.jpg" type="image/jpg">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen flex justify-center items-center bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div class="w-full max-w-md">
+        <div class="bg-white rounded-lg shadow-lg p-8">
+            <h1 class="text-3xl font-bold text-gray-800 mb-2">Login</h1>
+            <p class="text-gray-600 mb-6">Welcome back to Job Board</p>
+            <form action="" class="space-y-4">
+                <div class="flex items-center border border-gray-300 rounded-lg px-4 py-3 focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-200 transition">
+                    <div class="text-gray-500 mr-3">
+                        <i class="ri-mail-open-line text-xl"></i>
+                    </div>
+                    <input type="email" placeholder="Email Address" class="w-full outline-none bg-transparent text-gray-700 placeholder-gray-500" />
+                </div>
+                <div class="flex items-center border border-gray-300 rounded-lg px-4 py-3 focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-200 transition">
+                    <div class="text-gray-500 mr-3">
+                        <i class="ri-git-repository-private-line text-xl"></i>
+                    </div>
+                    <input type="password" placeholder="Password" class="w-full outline-none bg-transparent text-gray-700 placeholder-gray-500" />
+                </div>
+                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-lg transition duration-200 mt-6">Sign in</button>
+            </form>
+            <div class="mt-6 space-y-2 text-sm text-center">
+                <p class="text-gray-700">Don't have an account? <a href="#" class="text-indigo-600 hover:text-indigo-700 font-semibold">Sign up</a></p>
+                <p class="text-gray-700">Forgot password? <a href="#" class="text-indigo-600 hover:text-indigo-700 font-semibold">Reset Password</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

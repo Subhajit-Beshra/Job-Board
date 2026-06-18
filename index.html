@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="output.css">
     <link rel="icon" href="Assets/job-board.jpg" type="image/jpg">
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="min-h-screen flex flex-col">
     <!-- Navbar -->
@@ -16,7 +17,7 @@
             <h2 class="text-3xl font-bold">Job<span class="text-violet-500">Board</span></h2>
         </div>
         <div class="button flex gap-5">
-            <button class="border-1 border-black px-5 py-2 rounded-md cursor-pointer">Login</button>
+            <button class="border border-black px-5 py-2 rounded-md cursor-pointer hover:bg-gray-200" onclick="loginFunction()">Login</button>
             <button class="text-white bg-black px-5 py-2 rounded-lg cursor-pointer">Sign-up</button>
         </div>
     </div>
@@ -36,28 +37,29 @@
         </div>
      </div>
      <!-- Working-examples-->
-    <div class="working-examples mt-40 flex flex-row gap-30 px-20 ">
+    <div class="working-examples mt-40 flex items-center gap-10 px-20 ">
         <div class="image">
-            <img src="https://images.unsplash.com/photo-1572021335469-31706a17aaef?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt = "" class = "h-auto w-150">
+            <img src="https://images.unsplash.com/photo-1572021335469-31706a17aaef?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt = "" class = "h-auto w-[600px] ">
         </div>
-        <div class="icons grid grid-cols-3 gap-24">
-            <div class="group">
-                <i class="ri-team-line"></i>
+        <div class="icons grid grid-cols-2 gap-8 flex-1">
+            <div class="group p-4 bg-gray-100 rounded-lg flex flex-col items-center text-center">
+                <i class="ri-team-line text-6xl text-blue-600"></i>
                 <p>More than 3.8 million visitors every day</p>
             </div>
-            <div class="group">
-                <i class="ri-service-line"></i>
+            <div class="group p-4 bg-gray-100 rounded-lg flex flex-col items-center text-center">
+                <i class="ri-service-line text-6xl text-blue-600"></i>
                 <p>Leading recruiting website in the US and Europe</p>
             </div>
-            <div class="group">
-                <i class="ri-question-answer-line"></i>
+            <div class="group p-4 bg-gray-100 rounded-lg flex flex-col items-center text-center">
+                <i class="ri-question-answer-line text-6xl text-blue-600"></i>
                 <p>24\7 Dedicated and free Support</p>
             </div>
-            <div class="group">
-                <i class="ri-focus-2-line"></i>
+            <div class="group p-4 bg-gray-100 rounded-lg flex flex-col items-center text-center">
+                <i class="ri-focus-2-line text-6xl text-blue-600"></i>
                 <p>Only relevant and verified vacancies</p>
             </div>
         </div>
     </div>
+    <script src="index.js"></script>
 </body>
 </html>
