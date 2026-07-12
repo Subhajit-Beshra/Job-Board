@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Board | Sign-Up</title>
+    <!-- <link rel="stylesheet" href="output.css"> -->
+    <link rel="icon" href="/Assets/job-board.jpg" type="image/jpg">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen flex justify-center items-center bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div class="w-full max-w-md">
+      <!-- title -->
+        <div class="bg-white rounded-lg shadow-lg p-8">
+          <h1 class="text-3xl font-bold text-gray-800 mb-2">Create an Account</h1>
+          <p class="text-gray-600 mb-6">Join Job Board and start applying to the best opportunities.</p>
+          <!-- Form -->
+          <form class="space-y-4">
+            <div class="flex items-center border border-gray-300 rounded-lg px-4 py-3 focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-200 transition">
+              <div class="text-gray-500 mr-3">
+                <i class="ri-user-line text-xl"></i>
+              </div>
+              <!-- name -->
+              <input type="text" name="name" class="w-full outline-none bg-transparent text-gray-700 placeholder-gray-500" placeholder="Full name" required>
+            </div>
+            <div class="flex items-center border border-gray-300 rounded-lg px-4 py-3 focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-200 transition">
+              <div class="text-gray-500 mr-3">
+                <i class="ri-mail-open-line text-xl"></i>
+              </div>
+              <!-- email -->
+              <input type="email" name="email" class="w-full outline-none bg-transparent text-gray-700 placeholder-gray-500" placeholder="Email address" required>
+            </div>
+            <div class="flex items-center border border-gray-300 rounded-lg px-4 py-3 focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-200 transition">
+              <div class="text-gray-500 mr-3">
+                <i class="ri-lock-2-line text-xl"></i>
+              </div>
+              <!-- password -->
+              <input type="password" name="password" class="w-full outline-none bg-transparent text-gray-700 placeholder-gray-500" placeholder="Create password" required>
+            </div>
+            <div class="flex items-center border border-gray-300 rounded-lg px-4 py-3 focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-200 transition">
+              <div class="text-gray-500 mr-3">
+                <i class="ri-lock-password-line text-xl"></i>
+              </div>
+              <!-- confirm password -->
+              <input type="password" name="confirmPassword" class="w-full outline-none bg-transparent text-gray-700 placeholder-gray-500" placeholder="Confirm password" required>
+            </div>
+            <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-lg transition duration-200">Create account</button>
+          </form>
+          <!-- extra -->
+          <div class="mt-6 text-center text-sm text-gray-700">
+            <p>Already have an account? <a href="Login-form.html" class="text-indigo-600 hover:text-indigo-700 font-semibold">Sign in</a></p>
+          </div>
+        </div>
+    </div>
+
+     <script type="module" src="./../../firebase.js"></script>
+    <script type="module" src="../../JS/Sign-Up.js"></script>
+</body>
+</html>
