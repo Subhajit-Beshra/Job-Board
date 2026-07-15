@@ -3,8 +3,24 @@ import {
     createUserWithEmailAndPassword
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
 
-
 const form = document.querySelector("form");
+const passwordInput = document.getElementById("password");
+const confirmPasswordInput = document.getElementById("confirmPassword");
+const togglePassword = document.getElementById("toggle-password");
+const toggleConfirmPassword = document.getElementById("toggle-confirm-password");
+
+const createToggle = (button, input) => {
+    if (!button || !input) return;
+    button.addEventListener("click", () => {
+        const isPassword = input.type === "password";
+        input.type = isPassword ? "text" : "password";
+        button.innerHTML = isPassword ? '<i class="ri-eye-line text-xl"></i>' : '<i class="ri-eye-off-line text-xl"></i>';
+        input.focus();
+    });
+};
+
+createToggle(togglePassword, passwordInput);
+createToggle(toggleConfirmPassword, confirmPasswordInput);
 
 form.addEventListener("submit", async(e) => {
     // prevent refresh
@@ -15,8 +31,7 @@ form.addEventListener("submit", async(e) => {
     const confirmPassword = document.querySelector('input[name="confirmPassword"]').value;
 
     // compare password values
-    if (password.value !== confirmPassword.value) {
-        // handle mismatch (simple alert for now)
+    if (password !== confirmPassword) {
         alert('Passwords do not match.');
         return;
     }

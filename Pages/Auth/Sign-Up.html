@@ -31,19 +31,25 @@
               <!-- email -->
               <input type="email" name="email" class="w-full outline-none bg-transparent text-gray-700 placeholder-gray-500" placeholder="Email address" required>
             </div>
-            <div class="flex items-center border border-gray-300 rounded-lg px-4 py-3 focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-200 transition">
+            <div class="flex items-center border border-gray-300 rounded-lg px-4 py-3 focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-200 transition relative">
               <div class="text-gray-500 mr-3">
                 <i class="ri-lock-2-line text-xl"></i>
               </div>
               <!-- password -->
-              <input type="password" name="password" class="w-full outline-none bg-transparent text-gray-700 placeholder-gray-500" placeholder="Create password" required>
+              <input id="password" type="password" name="password" class="w-full outline-none bg-transparent text-gray-700 placeholder-gray-500 pr-10" placeholder="Create password" required>
+              <button type="button" id="toggle-password" class="absolute right-3 text-gray-500 hover:text-gray-800 focus:outline-none">
+                <i class="ri-eye-off-line text-xl"></i>
+              </button>
             </div>
-            <div class="flex items-center border border-gray-300 rounded-lg px-4 py-3 focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-200 transition">
+            <div class="flex items-center border border-gray-300 rounded-lg px-4 py-3 focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-200 transition relative">
               <div class="text-gray-500 mr-3">
                 <i class="ri-lock-password-line text-xl"></i>
               </div>
               <!-- confirm password -->
-              <input type="password" name="confirmPassword" class="w-full outline-none bg-transparent text-gray-700 placeholder-gray-500" placeholder="Confirm password" required>
+              <input id="confirmPassword" type="password" name="confirmPassword" class="w-full outline-none bg-transparent text-gray-700 placeholder-gray-500 pr-10" placeholder="Confirm password" required>
+              <button type="button" id="toggle-confirm-password" class="absolute right-3 text-gray-500 hover:text-gray-800 focus:outline-none">
+                <i class="ri-eye-off-line text-xl"></i>
+              </button>
             </div>
             <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-lg transition duration-200">Create account</button>
           </form>

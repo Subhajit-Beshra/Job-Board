@@ -79,6 +79,19 @@ form.addEventListener("submit", async(e) => {
     }
 })
 
+// password visibility toggle
+const passwordInput = document.getElementById("password");
+const togglePassword = document.getElementById("toggle-password");
+
+if (togglePassword && passwordInput) {
+    togglePassword.addEventListener("click", () => {
+        const isPassword = passwordInput.type === "password";
+        passwordInput.type = isPassword ? "text" : "password";
+        togglePassword.innerHTML = isPassword ? '<i class="ri-eye-line text-xl"></i>' : '<i class="ri-eye-off-line text-xl"></i>';
+        passwordInput.focus();
+    });
+}
+
 // logic for reset password
 const resetPassword = document.getElementById("reset-password");
 // password submission
