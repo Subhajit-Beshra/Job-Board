@@ -16,7 +16,8 @@ const showSuccess = (message) => {
     successToast.classList.remove("hidden");
     setTimeout(() => {
         successToast.classList.add("hidden");
-    }, 3000);
+        window.location.href = '../SetUp/SetUp.html';
+    }, 2000);
 };
 
 // error message
@@ -60,6 +61,7 @@ form.addEventListener("submit", async(e) => {
         showSuccess("Login Successful!");
         form.reset();
         console.log(userCredential.user);
+
     }catch(error){
 
         switch(error.code){
