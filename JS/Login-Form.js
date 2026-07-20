@@ -43,7 +43,7 @@ form.addEventListener("submit", async(e) => {
     e.preventDefault();
     // data read
     const email = document.querySelector('input[type="email"]').value;
-    const password = document.querySelector('input[type="password"]').value;
+    const password = document.getElementById('password').value;
 
     if(!email || !password){
         showError("Please fill all fields!");

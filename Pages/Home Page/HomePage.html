@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Board Page</title>
+    <!-- <link rel="stylesheet" href="output.css"> -->
+    <link rel="icon" href="/Assets/job-board.jpg" type="image/jpg">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet"></noscript>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen flex flex-col">
+    <div class="navbar flex flex-row justify-between items-center border-b border-violet-100 px-10 py-3">
+        <div class="title flex flex-row items-center gap-2">
+            <img src="../../Assets/job-board.jpg" alt="" class="h-auto w-9">
+            <h2 class="text-3xl font-bold">Job<span class="text-violet-500">Board</span></h2>
+        </div>
+        <div class="nav-items flex items-center gap-3">
+            <i class="ri-notification-line text-xl"></i>
+            <i class="ri-chat-3-line text-xl"></i>
+        </div>
+    </div>
+    <div class="content flex flex-row items-center h-screen">
+        <div class="side-bar h-full  flex flex-col gap-7 border-b border-r border-violet-100">
+            <div class=" menu-item dashboard flex flex-row items-center gap-4 cursor-pointer px-12 py-3 hover:bg-violet-400 hover:text-white transition-all duration-200   ">
+                <i class="ri-home-2-line"></i>
+                <p>Dashboard</p>
+            </div>
+            <div class="menu-item browse-jobs flex flex-row items-center gap-4 cursor-pointer px-12 py-3 hover:bg-violet-400 hover:text-white transition-all duration-200   ">
+                <i class="ri-search-line"></i>
+                <p>Browse Jobs</p>
+            </div>
+            <div class="menu-item applied-jobs flex flex-row items-center gap-4 cursor-pointer px-12 py-3 hover:bg-violet-400 hover:text-white transition-all duration-200   ">
+                <i class="ri-file-text-line"></i>
+                <p>Applied Jobs</p>
+            </div>
+            <div class="menu-item saved-jobs flex flex-row items-center gap-4 cursor-pointer px-12 py-3 hover:bg-violet-400 hover:text-white transition-all duration-200   ">
+                <i class="ri-heart-line"></i>
+                <p>Saved Jobs</p>
+            </div>
+            <div class="menu-item my-profile flex flex-row items-center gap-4 cursor-pointer px-12 py-3 hover:bg-violet-400 hover:text-white transition-all duration-200 active:bg-violet-400 active:text-white">
+                <i class="ri-user-line"></i>
+                <p>My Profile</p>
+            </div>
+            <div class="menu-item settings flex flex-row items-center gap-4 cursor-pointer px-12 py-3 hover:bg-violet-400 hover:text-white transition-all duration-200   ">
+                <i class="ri-settings-3-line"></i>
+                <p>Settings</p>
+            </div>
+        </div>
+        <div class="right-bar flex-1 overflow-y-auto"></div>
+    </div>
+
+    <script src="../../JS/HomePage.js"></script>
+</body>
+</html>
