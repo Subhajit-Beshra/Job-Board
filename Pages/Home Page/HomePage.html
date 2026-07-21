@@ -12,44 +12,52 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="min-h-screen flex flex-col">
-    <div class="navbar flex flex-row justify-between items-center border-b border-violet-100 px-10 py-3">
+    <div class="navbar flex flex-row justify-between items-center border-b border-violet-100 px-5 py-3 gap-2 md:gap-10">
         <div class="title flex flex-row items-center gap-2">
             <img src="../../Assets/job-board.jpg" alt="" class="h-auto w-9">
-            <h2 class="text-3xl font-bold">Job<span class="text-violet-500">Board</span></h2>
+            <h2 class="hidden md:block text-3xl font-bold">Job<span class="text-violet-500">Board</span></h2>
+        </div>
+        <div class="search-bar sm:block sm:w-80 md:w-96">
+            <div class="relative">
+                <span class="pointer-events-none absolute inset-y-0 left-4 flex items-center text-violet-500">
+                    <i class="ri-search-line text-lg"></i>
+                </span>
+                <input type="text" placeholder="Search jobs, companies, or skills" class="w-full rounded-full border border-violet-100 bg-white py-3 pl-12 pr-4 text-sm text-gray-700 shadow-sm shadow-violet-100 transition focus:border-violet-300 focus:outline-none focus:ring-2 focus:ring-violet-100" />
+            </div>
         </div>
         <div class="nav-items flex items-center gap-3">
-            <i class="ri-notification-line text-xl"></i>
-            <i class="ri-chat-3-line text-xl"></i>
+            <i class="ri-notification-line text-xl cursor-pointer"></i>
+            <i class="ri-chat-3-line text-xl cursor-pointer"></i>
         </div>
     </div>
     <div class="content flex flex-row items-center h-screen">
-        <div class="side-bar h-full  flex flex-col gap-7 border-b border-r border-violet-100">
-            <div class=" menu-item dashboard flex flex-row items-center gap-4 cursor-pointer px-12 py-3 hover:bg-violet-400 hover:text-white transition-all duration-200   ">
+        <div class="side-bar fixed bottom-0 left-0 w-full h-16 bg-white border-t border-violet-100 flex flex-row justify-around items-center md:static md:w-64 md:h-full md:flex-col md:justify-start md:items-stretch md:gap-2 md:border-r md:border-t-0">
+            <div class=" menu-item dashboard flex flex-col md:flex-row items-center justify-center md:justify-start gap-1 md:gap-4 cursor-pointer px-2 md:px-6 py-2 md:py-3 hover:bg-violet-400 hover:text-white transition-all duration-200">
                 <i class="ri-home-2-line"></i>
-                <p>Dashboard</p>
+                <p class="hidden md:block">Dashboard</p>
             </div>
-            <div class="menu-item browse-jobs flex flex-row items-center gap-4 cursor-pointer px-12 py-3 hover:bg-violet-400 hover:text-white transition-all duration-200   ">
+            <!-- <div class="menu-item browse-jobs flex flex-col md:flex-row items-center justify-center md:justify-start gap-1 md:gap-4  cursor-pointer px-2 md:px-6 py-2 md:py-3 hover:bg-violet-400 hover:text-white transition-all duration-200">
                 <i class="ri-search-line"></i>
-                <p>Browse Jobs</p>
-            </div>
-            <div class="menu-item applied-jobs flex flex-row items-center gap-4 cursor-pointer px-12 py-3 hover:bg-violet-400 hover:text-white transition-all duration-200   ">
+                <p class="hidden md:block">Browse Jobs</p>
+            </div> -->
+            <div class="menu-item applied-jobs flex flex-col md:flex-row items-center justify-center md:justify-start gap-1 md:gap-4 cursor-pointer px-2 md:px-6 py-2 md:py-3 hover:bg-violet-400 hover:text-white transition-all duration-200">
                 <i class="ri-file-text-line"></i>
-                <p>Applied Jobs</p>
+                <p class="hidden md:block">Applied Jobs</p>
             </div>
-            <div class="menu-item saved-jobs flex flex-row items-center gap-4 cursor-pointer px-12 py-3 hover:bg-violet-400 hover:text-white transition-all duration-200   ">
+            <div class="menu-item saved-jobs flex flex-col md:flex-row items-center justify-center md:justify-start gap-1 md:gap-4 cursor-pointer px-2 md:px-6 py-2 md:py-3 hover:bg-violet-400 hover:text-white transition-all duration-200">
                 <i class="ri-heart-line"></i>
-                <p>Saved Jobs</p>
+                <p class="hidden md:block">Saved Jobs</p>
             </div>
-            <div class="menu-item my-profile flex flex-row items-center gap-4 cursor-pointer px-12 py-3 hover:bg-violet-400 hover:text-white transition-all duration-200 active:bg-violet-400 active:text-white">
+            <div class="menu-item my-profile flex flex-col md:flex-row items-center justify-center md:justify-start gap-1 md:gap-4 cursor-pointer px-2 md:px-6 py-2 md:py-3 hover:bg-violet-400 hover:text-white transition-all duration-200 active:bg-violet-400 active:text-white">
                 <i class="ri-user-line"></i>
-                <p>My Profile</p>
+                <p class="hidden md:block">My Profile</p>
             </div>
-            <div class="menu-item settings flex flex-row items-center gap-4 cursor-pointer px-12 py-3 hover:bg-violet-400 hover:text-white transition-all duration-200   ">
+            <div class="menu-item settings flex flex-col md:flex-row items-center justify-center md:justify-start md:gap-4 cursor-pointer px-2 md:px-6 py-2 md:py-3 hover:bg-violet-400 hover:text-white transition-all duration-200   ">
                 <i class="ri-settings-3-line"></i>
-                <p>Settings</p>
+                <p class="hidden md:block">Settings</p>
             </div>
         </div>
-        <div class="right-bar flex-1 overflow-y-auto"></div>
+        <div class="right-bar flex-1 overflow-y-auto pb-20 md:pb-0"></div>
     </div>
 
     <script src="../../JS/HomePage.js"></script>
