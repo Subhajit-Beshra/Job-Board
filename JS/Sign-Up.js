@@ -8,6 +8,28 @@ const passwordInput = document.getElementById("password");
 const confirmPasswordInput = document.getElementById("confirmPassword");
 const togglePassword = document.getElementById("toggle-password");
 const toggleConfirmPassword = document.getElementById("toggle-confirm-password");
+const successToast = document.querySelector(".toast .success");
+const successText = successToast?.querySelector("p");
+const errorToast = document.querySelector(".toast .error");
+const errorText = errorToast?.querySelector("p");
+
+// show success message
+const successMessage = (message) => {
+    successText.textContent = message;
+    successToast.classList.remove("hidden");
+    setTimeout(() => {
+        successToast.classList.add("hidden");
+        window.location.href = "../SetUp/SetUp.html";
+    },3000);
+}
+// show error message
+const errorMessage = (message) => {
+    errorText.textContent = message;
+    errorToast.classList.remove("hidden");
+    setTimeout(() => {
+        errorToast.classList.add("hidden");
+    });
+}
 
 const createToggle = (button, input) => {
     if (!button || !input) return;
@@ -44,10 +66,11 @@ form.addEventListener("submit", async(e) => {
             email,
             password,
         );
-        alert("Account is created successfully!");
+        successMessage("Account is created successfully!");
+        form.reset();
         console.log(userCredential.user);
     }catch(error){
-        alert(error.message);
+        errorMessage(error.message);
     }
 
 })

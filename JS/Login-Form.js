@@ -16,7 +16,7 @@ const showSuccess = (message) => {
     successToast.classList.remove("hidden");
     setTimeout(() => {
         successToast.classList.add("hidden");
-        window.location.href = '../SetUp/SetUp.html';
+        window.location.href = '../Home Page/HomePage.html';
     }, 2000);
 };
 
